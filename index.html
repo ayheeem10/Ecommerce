@@ -296,6 +296,11 @@ footer{background:var(--dk2);border-top:1px solid var(--brd);padding:60px 5vw 28
 
 
 
+
+/* ALI EXPLORE BTN */
+.ali-explore-btn{display:inline-flex;align-items:center;gap:10px;background:var(--or);color:#fff;padding:14px 32px;border-radius:50px;font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;text-decoration:none;transition:all 0.3s var(--ease);box-shadow:0 8px 24px var(--sh);margin-bottom:36px;}
+.ali-explore-btn:hover{background:var(--or2);transform:translateY(-3px);box-shadow:0 14px 36px var(--sh);}
+
 /* CUSTOM ORDER */
 #custom{background:var(--dk2);border-top:1px solid var(--brd);}
 .custom-inner{max-width:700px;margin:0 auto;text-align:center;}
@@ -319,19 +324,7 @@ footer{background:var(--dk2);border-top:1px solid var(--brd);padding:60px 5vw 28
 #searchInput::placeholder{color:var(--mu);}
 
 
-/* BANNER */
-#banner{background:linear-gradient(135deg,#FF6A00 0%,#E04000 50%,#FF9248 100%);padding:60px 5vw;position:relative;overflow:hidden;}
-#banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:40px 40px;}
-#banner::after{content:'✦';position:absolute;right:8%;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;color:#fff;pointer-events:none;}
-.banner-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;z-index:2;}
-.banner-left{}
-.banner-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:0.65rem;letter-spacing:3px;padding:6px 14px;border-radius:30px;text-transform:uppercase;font-weight:700;margin-bottom:16px;}
-.banner-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1px;margin-bottom:10px;}
-.banner-sub{color:rgba(255,255,255,0.8);font-size:0.9rem;line-height:1.7;max-width:480px;}
-.banner-btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--or);padding:14px 32px;border-radius:50px;font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;text-decoration:none;transition:all 0.3s var(--ease);box-shadow:0 8px 28px rgba(0,0,0,0.2);white-space:nowrap;}
-.banner-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 40px rgba(0,0,0,0.3);}
-.banner-btn svg{transition:transform 0.3s;}
-.banner-btn:hover svg{transform:translateX(4px);}
+
 
 /* REVEAL */
 .rv{opacity:0;transform:translateY(32px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease);}
@@ -448,20 +441,7 @@ footer{background:var(--dk2);border-top:1px solid var(--brd);padding:60px 5vw 28
 </div>
 
 
-<!-- BANNER -->
-<section id="banner">
-  <div class="banner-inner">
-    <div class="banner-left">
-      <div class="banner-tag">🛍️ AliExpress × Tunisie</div>
-      <div class="banner-title">Tu veux commander<br/>quelque chose de spécial ?</div>
-      <p class="banner-sub">Trouve n'importe quel produit sur AliExpress et on te le livre directement en Tunisie. Copie le lien et envoie le nous !</p>
-    </div>
-    <a href="https://www.aliexpress.com" target="_blank" rel="noopener" class="banner-btn">
-      Explorer AliExpress
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-    </a>
-  </div>
-</section>
+
 
 <!-- FEATURES -->
 <section id="feats">
@@ -617,6 +597,11 @@ footer{background:var(--dk2);border-top:1px solid var(--brd);padding:60px 5vw 28
       <span class="ey rv">Commande Personnalisée</span>
       <h2 class="st rv">Tu veux autre chose ?</h2>
       <p class="ss rv">Envoie nous le lien AliExpress du produit qui t'intéresse et on s'occupe du reste ! Ajoute jusqu'à 5 produits en une seule commande.</p>
+      <a href="https://www.aliexpress.com" target="_blank" rel="noopener" class="ali-explore-btn rv">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        Explorer AliExpress
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
       <div class="custom-form-box rv">
         <form name="commande-custom" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleCustom(event)">
           <input type="hidden" name="form-name" value="commande-custom"/>
